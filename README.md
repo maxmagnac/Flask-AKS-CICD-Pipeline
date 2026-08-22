@@ -75,9 +75,8 @@ GitHub Secrets Required
 
 Pipeline Screenshots
 
-```
-
 GitHub Actions - Successful Pipeline Run
+```
 GitHub Actions Success (screenshots/github-actions-success.png)
 ```
 
