@@ -76,32 +76,50 @@ GitHub Secrets Required
 Pipeline Screenshots
 
 GitHub Actions - Successful Pipeline Run
-```
-GitHub Actions Success (screenshots/github-actions-success.png)
-```
+
+
+GitHub Actions Success
+<img width="997" height="439" alt="github-actions-success" src="https://github.com/user-attachments/assets/06b3d478-2447-4db4-8cd9-9d5bc854e01d" />
+
 
 
 Azure Container Registry - Docker Image Stored
-ACR Docker Image (screenshots/acr-docker-image.png)
+<img width="1457" height="531" alt="acr-docker-image" src="https://github.com/user-attachments/assets/2f61b7c9-1ef8-41e8-b445-03a0bd2f1d40" />
+
 
 AKS Workload - Flask App Pods Running
-AKS Workload Running (screenshots/aks-workload-running.png)
+<img width="1231" height="828" alt="aks-workload-running" src="https://github.com/user-attachments/assets/bbd06ffa-e9c6-4310-b026-47236488110f" />
+
+
 
 Live Flask App - Azure Portal Services View
-Flask App Live (screenshots/flask-app-live.png)
+<img width="1592" height="473" alt="flask-app-live" src="https://github.com/user-attachments/assets/32cf71a0-53cd-4001-ae93-4253b896e09b" />
+
+
 
 Live Flask App - kubectl Service Output
-Flask App Live CMD (screenshots/flask-app-live_1.png)
+<img width="749" height="86" alt="flask-app-live_1" src="https://github.com/user-attachments/assets/0108cc95-c0bc-4f9b-a90d-1cec3c6aef87" />
+
 
 Live Flask App - Browser Confirmation
-Flask App Live Browser (screenshots/flask-app-live_2_browser.png)
+
+<img width="456" height="178" alt="flask-app-live_2_browser" src="https://github.com/user-attachments/assets/86e7e21e-a94c-473a-a2cf-174c8c9cbddc" />
+
+
+Lessons Learned
+Azure Credentials Configuration
+Configuring the AZURE_CREDENTIALS secret required generating a service principal with the correct role assignments. The JSON output from the az ad sp create-for-rbac command maps directly to the GitHub secret - formatting errors in that JSON block caused initial authentication failures. Validating the JSON structure before saving it as a secret resolved the issue.
+
+YAML Syntax in GitHub Actions
+GitHub Actions workflows are strict about indentation and spacing. A single misaligned step or missing colon caused the entire pipeline to fail at parse time. Reading the error output in the Actions tab carefully and validating the YAML with a linter before pushing saved significant troubleshooting time.
+
+AKS Deployment Timing
+After pushing a new image to ACR, the AKS deployment update requires a moment to pull and spin up the new pod. Building a clear understanding of rolling update behavior - and using kubectl get pods to monitor pod status - helped confirm successful deployments.
 
 Skills Demonstrated
-
-- CI/CD pipeline design and automation with GitHub Actions
-- Azure service principal authentication and GitHub Secrets management
-- Docker image build and push automation
-- Kubernetes rolling deployment automation
-- End-to-end cloud-native delivery pipeline on AKS
-
+CI/CD pipeline design and automation with GitHub Actions
+Azure service principal authentication and GitHub Secrets management
+Docker image build and push automation
+Kubernetes rolling deployment automation
+End-to-end cloud-native delivery pipeline on AKS
 Maurrin Carter | Cloud Engineer | Azure | Kubernetes | Docker | GitHub Actions
