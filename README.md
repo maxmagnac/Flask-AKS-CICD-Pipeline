@@ -106,7 +106,7 @@ Live Flask App - Browser Confirmation
 <img width="456" height="178" alt="flask-app-live_2_browser" src="https://github.com/user-attachments/assets/86e7e21e-a94c-473a-a2cf-174c8c9cbddc" />
 
 
-Here is the properly formatted bottom section of the README:
+
 
 Lessons Learned
 
