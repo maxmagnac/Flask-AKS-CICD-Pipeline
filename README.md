@@ -53,6 +53,7 @@ graph TD
  style A fill:#0078D4,color:#fff
 ```
 
+```
 How the Pipeline Works
 
 Every push to the main branch triggers the GitHub Actions workflow automatically. The pipeline runs the following steps in sequence:
@@ -71,7 +72,7 @@ GitHub Secrets Required
 | ACR_NAME | Azure Container Registry name |
 | AKS_CLUSTER_NAME | AKS cluster name |
 | AKS_RESOURCE_GROUP | Azure resource group name |
-
+```
 Pipeline Screenshots
 
 ```
