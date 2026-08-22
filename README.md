@@ -58,19 +58,24 @@ ACR_NAME	Azure Container Registry name
 AKS_CLUSTER_NAME	AKS cluster name
 AKS_RESOURCE_GROUP	Azure resource group name
 
-
 Pipeline Screenshots
 GitHub Actions - Successful Pipeline Run
-
 Azure Container Registry - Docker Image Stored
-
 AKS Workload - Flask App Pods Running
-
 Live Flask App - Azure Portal Services View
-
 Live Flask App - kubectl Service Output
-
 Live Flask App - Browser Confirmation
+
+Lessons Learned
+Azure Credentials Configuration
+Configuring the AZURE_CREDENTIALS secret required generating a service principal with the correct role assignments. The JSON output from the az ad sp create-for-rbac command maps directly to the GitHub secret - formatting errors in that JSON block caused initial authentication failures. Validating the JSON structure before saving it as a secret resolved the issue.
+
+YAML Syntax in GitHub Actions
+GitHub Actions workflows are strict about indentation and spacing. A single misaligned step or missing colon caused the entire pipeline to fail at parse time. Reading the error output in the Actions tab carefully and validating the YAML with a linter before pushing saved significant troubleshooting time.
+
+AKS Deployment Timing
+After pushing a new image to ACR, the AKS deployment update requires a moment to pull and spin up the new pod. Building a clear understanding of rolling update behavior - and using kubectl get pods to monitor pod status - helped confirm successful deployments.
+
 
 Skills Demonstrated
 CI/CD pipeline design and automation with GitHub Actions
