@@ -106,7 +106,10 @@ Live Flask App - Browser Confirmation
 <img width="456" height="178" alt="flask-app-live_2_browser" src="https://github.com/user-attachments/assets/86e7e21e-a94c-473a-a2cf-174c8c9cbddc" />
 
 
+Here is the properly formatted bottom section of the README:
+
 Lessons Learned
+
 Azure Credentials Configuration
 Configuring the AZURE_CREDENTIALS secret required generating a service principal with the correct role assignments. The JSON output from the az ad sp create-for-rbac command maps directly to the GitHub secret - formatting errors in that JSON block caused initial authentication failures. Validating the JSON structure before saving it as a secret resolved the issue.
 
@@ -117,9 +120,11 @@ AKS Deployment Timing
 After pushing a new image to ACR, the AKS deployment update requires a moment to pull and spin up the new pod. Building a clear understanding of rolling update behavior - and using kubectl get pods to monitor pod status - helped confirm successful deployments.
 
 Skills Demonstrated
-CI/CD pipeline design and automation with GitHub Actions
-Azure service principal authentication and GitHub Secrets management
-Docker image build and push automation
-Kubernetes rolling deployment automation
-End-to-end cloud-native delivery pipeline on AKS
+
+- CI/CD pipeline design and automation with GitHub Actions
+- Azure service principal authentication and GitHub Secrets management
+- Docker image build and push automation
+- Kubernetes rolling deployment automation
+- End-to-end cloud-native delivery pipeline on AKS
+
 Maurrin Carter | Cloud Engineer | Azure | Kubernetes | Docker | GitHub Actions
