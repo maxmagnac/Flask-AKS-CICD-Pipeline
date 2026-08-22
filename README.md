@@ -1,12 +1,10 @@
-Got it. The README already has a Pipeline Screenshots section with all six images. The image syntax needs fixing though - they're showing as plain text links instead of rendered images. Here is the full corrected README:
+#CI/CD Pipeline - Flask App Deployment on Azure Kubernetes Service (AKS)
 
-CI/CD Pipeline - Flask App Deployment on Azure Kubernetes Service (AKS)
-
-Overview
+## Overview
 
 This repository contains the CI/CD pipeline implementation for the Flask App Deployment on Azure Kubernetes Service (AKS) project. The pipeline automates the build, push, and deployment process using GitHub Actions, eliminating manual steps and ensuring every push to main delivers a fresh deployment to AKS.
 
-Original Project
+## Original Project
 
 This pipeline extends the original Flask AKS deployment project, which covers:
 - Infrastructure provisioning with Terraform
@@ -16,7 +14,7 @@ This pipeline extends the original Flask AKS deployment project, which covers:
 
 View the original project here: Flask-App-Deployment-on-Azure-Kubernetes-Service-AKS (https://github.com/maxmagnac/Flask-App-Deployment-on-Azure-Kubernetes-Service-AKS-)
 
-Technologies Used
+## Technologies Used
 
 - Python / Flask
 - Docker
@@ -25,7 +23,7 @@ Technologies Used
 - GitHub Actions
 - Azure CLI
 
-Azure Resources
+## Azure Resources
 
 | Resource | Name |
 |---|---|
@@ -33,7 +31,7 @@ Azure Resources
 | AKS Cluster | flask-aks-cluster |
 | Container Registry | flaskaksacr2026 |
 
-Repository Structure
+## Repository Structure
 
 ```mermaid
 graph TD
@@ -54,7 +52,7 @@ graph TD
 
 ```
 
-How the Pipeline Works
+## How the Pipeline Works
 
 Every push to the main branch triggers the GitHub Actions workflow automatically. The pipeline runs the following steps in sequence:
 
@@ -64,7 +62,7 @@ Every push to the main branch triggers the GitHub Actions workflow automatically
 4. Pushes the image to Azure Container Registry
 5. Updates the AKS deployment with the new image
 
-GitHub Secrets Required
+## GitHub Secrets Required
 
 | Secret | Description |
 |---|---|
@@ -73,7 +71,7 @@ GitHub Secrets Required
 | AKS_CLUSTER_NAME | AKS cluster name |
 | AKS_RESOURCE_GROUP | Azure resource group name |
 
-Pipeline Screenshots
+## Pipeline Screenshots
 
 GitHub Actions - Successful Pipeline Run
 
