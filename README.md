@@ -35,7 +35,7 @@ Azure Resources
 
 Repository Structure
 
-``mermaid
+``'mermaid
 graph TD
  A[flask-aks-cicd/] --> B[.github/]
  A --> C[screenshots/]
@@ -51,7 +51,7 @@ graph TD
  C --> C6[flask-app-live_2_browser.png]
 
  style A fill:#0078D4,color:#fff
-`
+```
 
 How the Pipeline Works
 
@@ -74,8 +74,10 @@ GitHub Secrets Required
 
 Pipeline Screenshots
 
+```
 GitHub Actions - Successful Pipeline Run
 GitHub Actions Success (screenshots/github-actions-success.png)
+```
 
 Azure Container Registry - Docker Image Stored
 ACR Docker Image (screenshots/acr-docker-image.png)
