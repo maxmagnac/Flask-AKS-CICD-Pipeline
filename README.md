@@ -75,8 +75,12 @@ GitHub Secrets Required
 
 Pipeline Screenshots
 
+```
+
 GitHub Actions - Successful Pipeline Run
 GitHub Actions Success (screenshots/github-actions-success.png)
+```
+
 
 Azure Container Registry - Docker Image Stored
 ACR Docker Image (screenshots/acr-docker-image.png)
