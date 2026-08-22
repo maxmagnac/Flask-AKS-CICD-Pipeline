@@ -107,7 +107,7 @@ Live Flask App - Browser Confirmation
 
 
 
-
+```
 Lessons Learned
 
 Azure Credentials Configuration
@@ -128,3 +128,5 @@ Skills Demonstrated
 - End-to-end cloud-native delivery pipeline on AKS
 
 Maurrin Carter | Cloud Engineer | Azure | Kubernetes | Docker | GitHub Actions
+
+```
