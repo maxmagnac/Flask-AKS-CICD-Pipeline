@@ -51,7 +51,8 @@ graph TD
  C --> C6[flask-app-live_2_browser.png]
 
  style A fill:#0078D4,color:#fff
-``
+
+```
 
 How the Pipeline Works
 
